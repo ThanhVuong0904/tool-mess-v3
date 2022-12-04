@@ -19,7 +19,6 @@ class ExcelTool(Resource):
         file_excel = args['file']
         date_query = request.form.get('date_query')
         excel = Excel(file_excel, date_query)
-        
         return make_response(jsonify(excel.result()), 200)
     
 
